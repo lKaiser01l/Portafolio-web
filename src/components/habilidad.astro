@@ -1,0 +1,51 @@
+---
+// Habilidades.astro
+
+const habilidades = [
+  { titulo: "Astro, React & Tailwind CSS", categoria: "FRONTEND", numero: "01" },
+  { titulo: "Django, Flask, Spring, Laravel & PHP", categoria: "BACKEND", numero: "02" },
+  { titulo: "MySQL, PostgreSQL, SQLserver & MongoDB", categoria: "Base de Datos", numero: "03" },
+  { titulo: "N8N , Power Apps & Automate", categoria: "Automatización", numero: "04" },
+  { titulo: "Java, JavaScript , TypeScript, Python", categoria: "Lenguajes", numero: "05" },
+  { titulo: "Docker, Git, Github, Postman & VS Code", categoria: "Herramientas", numero: "06" },
+  
+];
+---
+
+<section id="habilidades" class="w-full bg-white py-24 px-6">
+  <div class="max-w-5xl mx-auto">
+    
+    <!-- Encabezado de la sección -->
+    <div class="mb-14 max-w-2xl">
+      <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4 tracking-tight">
+        Habilidades & Expertise
+      </h2>
+      <p class="text-gray-600 text-base md:text-lg leading-relaxed">
+        Tecnologías y herramientas que domino para crear soluciones completas de principio a fin.
+      </p>
+    </div>
+
+    <!-- Grid de Tarjetas -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
+      {habilidades.map((habilidad) => (
+        <article class="border border-gray-200 rounded-xl px-7 py-6 flex justify-between items-start hover:border-gray-300 hover:shadow-sm transition-all bg-white cursor-default">
+          
+          <div class="flex flex-col gap-1.5">
+            <h3 class="text-lg font-semibold text-gray-900">
+              {habilidad.titulo}
+            </h3>
+            <span class="text-[11px] font-semibold text-gray-500 tracking-wider uppercase">
+              {habilidad.categoria}
+            </span>
+          </div>
+
+          <span class="text-xs font-medium text-gray-400 mt-1">
+            {habilidad.numero}
+          </span>
+          
+        </article>
+      ))}
+    </div>
+
+  </div>
+</section>
